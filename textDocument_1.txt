@@ -1,2 +1,81 @@
 Hello Good Morning
-Hello
+<script>
+class user
+	{
+	constructor(username,email)
+		{
+		this.username=username;
+		this.email=email;
+		}
+
+	login()
+		{
+		document.write(this.username+" has logged in. <br>");
+		}
+	}
+
+class student extends user
+	{
+	constructor(username,email)
+		{
+		super(username,email);
+		this.course=[];
+		//this.c="";
+		}
+	enroll()
+		{
+		
+		let limit=Number(prompt("Enter the number of course to be enrolled:"));
+		
+		for(let i=0;i<limit;i++)
+			{
+			//this.c=prompt("Enter the course:");
+			this.course.push(prompt("Enter the course:"));
+			}
+		this.login();
+		document.write(this.username+" has enrolled for the courses:"+this.course +"<br>");
+		}
+	}
+
+
+class instructor extends user
+	{
+	constructor(username,email,newcourse)
+		{
+		super(username, email)
+		this.newcourse=newcourse;
+		}
+
+	create_new_course()
+		{
+		this.login();
+		document.write(this.username+" has created a new course: "+this.newcourse);
+		}
+	}
+
+
+
+let user_name=prompt("Enter the username: ");
+let e_mail=prompt("Enter the Email: ");
+let check=prompt("Enter wether Student or Instructor");
+
+
+
+if(check.toLowerCase()=="student")
+	{
+	new student(user_name,e_mail).enroll();
+	//s1.enroll();
+	}
+else if(check.toLowerCase()=="instructor")
+	{
+        //let newcourse=prompt("Enter the new course:");
+	new instructor(user_name,e_mail,prompt("Enter the new course:")).create_new_course();
+	//i1.create_new_course();
+	}
+
+
+
+
+			
+
+</script>Hello
