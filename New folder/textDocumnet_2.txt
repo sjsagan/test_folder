@@ -1,2 +1,29 @@
-Good night .
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MY First Table</title>
+	</head>
+	<table border="1" cellpadding="15px" width="100%">
+		<caption><h1>Students</h1></captions>
+		<colgroup>
+			<col style="background-color:red">
+			<col style="background-color:yellow">
+		</colgroup>
 
+		<thead>
+			<tr>
+				<th>Sl.No</th>
+				<th>Name</th>
+				<th>Marks</th>
+			</tr>
+		</thead>
+		
+		<body>
+			<tr>
+				<td>1</td>
+				<td>Arun</td>
+				<td>50</td>
+			</tr>
+		</body>
+	<table>
+</html>
